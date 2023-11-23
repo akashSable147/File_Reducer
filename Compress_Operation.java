@@ -17,8 +17,9 @@ public class Compress_Operation {
         String filePathDirectory = file.getParent();
 
         FileInputStream read_File = new FileInputStream(file);
-        FileOutputStream write_File = new FileOutputStream(filePathDirectory + "/"+file.getName()+ "_Comp.gz");
-        GZIPOutputStream comp_File = new GZIPOutputStream(write_File);
+       
+        GZIPOutputStream comp_File = new GZIPOutputStream(read_File);
+         FileOutputStream write_File = new FileOutputStream(filePathDirectory + "/"+file.getName()+ "_ak.gz");
 
         name = file.getName();
 
